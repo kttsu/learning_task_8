@@ -9,8 +9,8 @@ import java.util.List;
 public interface MusicMapper {
     @Select("SELECT * FROM music")
     List<Music>findAll();
-    @Select("SELECT * FROM music WHERE name LIKE CONCAT(#{prefix}, '%')")
-    List<Music> findByMusicStartingWith(String prefix);
+    @Select("SELECT * FROM music WHERE name LIKE CONCAT(#{prefix}, '%') AND name LIKE CONCAT('%',#{suffix}) AND name LIKE CONCAT('%',#{contains}, '%')")
+    List<Music> findByMusicStartingWith(String prefix, String suffix, String contains);
 
 
 }

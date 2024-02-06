@@ -14,7 +14,10 @@ public class MusicController {
         this.musicMapper = musicMapper;
     }
     @GetMapping("/music")
-    public List<Music> findByMusic(@RequestParam String startsWith) {
-        return musicMapper.findByMusicStartingWith(startsWith);
+    public List<Music> findByMusic(MusicSearchRequest request) {
+        System.out.println(request.getStartsWith());
+        System.out.println(request.getEndsWith());
+        System.out.println(request.getContains());
+        return musicMapper.findByMusicStartingWith(request.getStartsWith(),request.getEndsWith(),request.getContains());
     }
 }
