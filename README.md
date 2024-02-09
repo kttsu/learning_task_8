@@ -33,6 +33,9 @@
 
 
 3.該当しない値を入力した場合
-　- containsで該当しない値 G を入力した場合 []　が返却される
+ - contains=のように文字を指定しない場合
+   ![スクリーンショット (50)](https://github.com/kttsu/learning_task_8/assets/150462533/c270651b-234b-4951-b3a4-217605330aff)
+
+ - containsで該当しない値 G を入力した場合 []　が返却される
 
 ![スクリーンショット (49)](https://github.com/kttsu/learning_task_8/assets/150462533/2d518bb7-512e-4cdc-ac53-7ae62a7c5e74)
