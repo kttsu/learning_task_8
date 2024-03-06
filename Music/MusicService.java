@@ -13,12 +13,9 @@ public class MusicService {
     }
     public Music findMusic(int id) {
         Optional<Music> music = this.musicMapper.findById(id);
-        if (music.isPresent()) {
-            return music.get();
-        } else {
-            throw new UserNotFoundException("user not found");
-        }
+        return music.orElseThrow(() -> new UserNotFoundException("user not found"));
     }
 }
+
 
 
